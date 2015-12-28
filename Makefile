@@ -11,6 +11,7 @@ CPPFLAGS = -I$(TOP) # for config.h
 ifeq (-$(findstring gcc,$(CC))-,-gcc-)
 ifeq (-$(findstring $(GCC_MAJOR),01)-,--)
 CFLAGS+=-fno-strict-aliasing
+CFLAGS+=-fPIC
 ifeq (-$(findstring $(GCC_MAJOR),23)-,--)
 CFLAGS+=-Wno-pointer-sign -Wno-sign-compare
 ifeq (-$(GCC_MAJOR)-$(findstring $(GCC_MINOR),56789)-,-4--)

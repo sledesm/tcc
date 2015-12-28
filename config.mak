@@ -22,6 +22,6 @@ NATIVE_DEFINES+=-DCONFIG_LDDIR="\"lib64\""
 ARCH=x86-64
 TARGETOS=Linux
 VERSION=0.9.26
-SRC_PATH=/home/santi/cridled/cridcnc/tcc
+SRC_PATH=/home/santi/cridled/tcc
 top_srcdir=$(TOP)
 top_builddir=$(TOP)

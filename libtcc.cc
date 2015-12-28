@@ -894,6 +894,7 @@ LIBTCCAPI TCCState *tcc_new(void)
     char buffer[100];
     int a,b,c;
 
+    printf("starting tcc_new\n");
     tcc_cleanup();
 
     s = (TCCState *)tcc_mallocz(sizeof(TCCState));
@@ -906,7 +907,9 @@ LIBTCCAPI TCCState *tcc_new(void)
     tcc_set_lib_path(s, CONFIG_TCCDIR);
 #endif
     s->output_type = TCC_OUTPUT_MEMORY;
+    printf("before preprocess_new\n");
     preprocess_new();
+    printf("add after preprocess_new\n");
     s->include_stack_ptr = s->include_stack;
 
     /* we add dummy defines for some special macros to speed up tests

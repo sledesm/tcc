@@ -966,6 +966,7 @@ static inline int toup(int c)
 # define PUB_FUNC
 #endif
 
+
 #ifdef ONE_SOURCE
 #define ST_INLN static inline
 #define ST_FUNC static
